@@ -4,6 +4,8 @@ services:
     image: agent0ai/agent-zero:latest
     volumes:
       - ./agent-zero:/a0
+      # 成果物や作業コードの共有用ディレクトリ
+      - ./workspace:/a0/usr/workdir
     ports:
       - "50080:80"
     ulimits:
